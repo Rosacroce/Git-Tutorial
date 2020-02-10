@@ -5,9 +5,18 @@ Created on Mon Feb 10 15:43:24 2020
 @author: aless
 """
 
-game_board = [[0, 0, 0],
-              [0, 0, 0],
-              [0, 0, 0]]
+def create_initial_game_board():
+
+    game_size = int(input("How many rows/columns should the game board have? "))
+    game_board = []
+    for i in range(game_size):
+        row = []
+        for i in range(game_size):
+            row.append(0)
+
+        game_board.append(row)
+
+    return game_board
 
 def show(game_board):
 
